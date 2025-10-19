@@ -33,6 +33,7 @@ M.colors = {
 
 function M.setup(opts)
 	opts = opts or {}
+	local transparent = opts.transparent or false
 
 	vim.cmd("hi clear")
 	if vim.fn.exists("syntax_on") then
@@ -43,26 +44,27 @@ function M.setup(opts)
 	vim.g.colors_name = "firewatch"
 
 	local c = M.colors
+	local bg = transparent and "NONE" or c.bg
 
 	local highlights = {
 		-- Base
-		Normal = { fg = c.fg, bg = c.bg },
-		NormalFloat = { fg = c.fg, bg = c.bg },
-		FloatBorder = { fg = c.comment, bg = c.bg },
+		Normal = { fg = c.fg, bg = bg },
+		NormalFloat = { fg = c.fg, bg = bg },
+		FloatBorder = { fg = c.comment, bg = bg },
 
 		-- Cursor
 		Cursor = { fg = c.bg, bg = c.cursor },
-		CursorLine = { bg = "#252831" },
-		CursorColumn = { bg = "#252831" },
-		ColorColumn = { bg = "#252831" },
+		CursorLine = { bg = transparent and "NONE" or "#252831" },
+		CursorColumn = { bg = transparent and "NONE" or "#252831" },
+		ColorColumn = { bg = transparent and "NONE" or "#252831" },
 
 		-- Line numbers
 		LineNr = { fg = c.comment },
 		CursorLineNr = { fg = c.yellow },
 
 		-- Status line
-		StatusLine = { fg = c.fg, bg = "#252831" },
-		StatusLineNC = { fg = c.comment, bg = "#252831" },
+		StatusLine = { fg = c.fg, bg = transparent and "NONE" or "#252831" },
+		StatusLineNC = { fg = c.comment, bg = transparent and "NONE" or "#252831" },
 
 		-- Visual
 		Visual = { bg = c.selection },

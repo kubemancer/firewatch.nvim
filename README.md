@@ -8,7 +8,7 @@ Warm, muted colors perfect for long coding sessions.
 
 - Full Treesitter support
 - LSP diagnostic colors
-- Clean, minimal UI highlightings
+- Clean, minimal UI highlighting
 - Dark background with warm accent colors
 
 ## Installation
@@ -63,6 +63,32 @@ Or use the setup function directly:
 require('firewatch').setup()
 ```
 
+### Transparency
+
+Enable transparent background:
+
+```lua
+require('firewatch').setup({
+  transparent = true
+})
+```
+
+Or with lazy.nvim:
+
+```lua
+{
+  'kubemancer/firewatch.nvim',
+  lazy = false,
+  priority = 1000,
+  opts = {
+    transparent = true
+  },
+  config = function(_, opts)
+    require('firewatch').setup(opts)
+  end
+}
+```
+
 ## Color Palette
 
 | Color      | Hex       | Usage                   |
@@ -79,3 +105,7 @@ require('firewatch').setup()
 ## Credits
 
 Based on the Firewatch terminal theme from [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes).
+
+## License
+
+MIT
