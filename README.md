@@ -8,7 +8,7 @@ Warm, muted colors perfect for long coding sessions.
 
 - Full Treesitter support
 - LSP diagnostic colors
-- Clean, minimal UI highlighting
+- Clean, minimal UI highlightings
 - Dark background with warm accent colors
 
 ## Installation
@@ -17,7 +17,7 @@ Warm, muted colors perfect for long coding sessions.
 
 ```lua
 {
-  'yourusername/firewatch.nvim',
+  'kubemancer/firewatch.nvim',
   lazy = false,
   priority = 1000,
   config = function()
@@ -30,7 +30,7 @@ Warm, muted colors perfect for long coding sessions.
 
 ```lua
 use {
-  'yourusername/firewatch.nvim',
+  'kubemancer/firewatch.nvim',
   config = function()
     vim.cmd.colorscheme('firewatch')
   end
@@ -40,7 +40,7 @@ use {
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'yourusername/firewatch.nvim'
+Plug 'kubemancer/firewatch.nvim'
 ```
 
 Then in your config:
