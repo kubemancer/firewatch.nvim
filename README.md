@@ -1,4 +1,4 @@
-# firewatch.nvim
+# 🌲 firewatch.nvim
 
 A Neovim colorscheme inspired by the [Ghostty Firewatch theme](https://github.com/mbadolato/iTerm2-Color-Schemes).
 
