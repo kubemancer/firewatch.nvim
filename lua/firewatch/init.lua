@@ -33,9 +33,8 @@ M.colors = {
 
 function M.setup(opts)
 	opts = opts or {}
-	--local transparent = opts.transparent or false
-
 	local term_colors = opts.term_colors ~= false
+	local transparent = opts.transparent or false
 
 	vim.cmd("hi clear")
 	if vim.fn.exists("syntax_on") then
@@ -45,14 +44,11 @@ function M.setup(opts)
 	vim.o.background = "dark"
 	vim.g.colors_name = "firewatch"
 
-	local c = M.colors -- c is defined here
-	local bg = c.bg
-
-	vim.o.background = "dark"
-	vim.g.colors_name = "firewatch"
+	local c = M.colors
+	local bg = transparent and "NONE" or c.bg
 
 	-- Terminal colors
-	vim.g.terminal_color_0 = c.black
+	vim.g.terminal_color_0 = transparent and "NONE" or c.black
 	vim.g.terminal_color_1 = c.red
 	vim.g.terminal_color_2 = c.green
 	vim.g.terminal_color_3 = c.yellow
@@ -60,17 +56,14 @@ function M.setup(opts)
 	vim.g.terminal_color_5 = c.magenta
 	vim.g.terminal_color_6 = c.cyan
 	vim.g.terminal_color_7 = c.white
-	vim.g.terminal_color_8 = c.bright_black
+	vim.g.terminal_color_8 = transparent and "NONE" or c.bright_black
 	vim.g.terminal_color_9 = c.bright_red
 	vim.g.terminal_color_10 = c.bright_green
 	vim.g.terminal_color_11 = c.bright_yellow
-	vim.g.terminal_color_12 = c.bright_blue
+	vim.g.terminal_color_12 = c.blue
 	vim.g.terminal_color_13 = c.bright_magenta
 	vim.g.terminal_color_14 = c.bright_cyan
 	vim.g.terminal_color_15 = c.bright_white
-
-	local c = M.colors
-	local bg = transparent and "NONE" or c.bg
 
 	local highlights = {
 		-- Base
