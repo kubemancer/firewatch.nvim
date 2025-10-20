@@ -54,9 +54,9 @@ function M.setup(opts)
 
 		-- Cursor
 		Cursor = { fg = c.bg, bg = c.cursor },
-		CursorLine = { bg = transparent and "NONE" or "#252831" },
-		CursorColumn = { bg = transparent and "NONE" or "#252831" },
-		ColorColumn = { bg = transparent and "NONE" or "#252831" },
+		CursorLine = { bg = transparent and "NONE" or "#fff" },
+		CursorColumn = { bg = transparent and "NONE" or "#fff" },
+		ColorColumn = { bg = transparent and "NONE" or "#fff" },
 
 		-- Line numbers
 		LineNr = { fg = c.comment },
