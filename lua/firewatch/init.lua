@@ -53,7 +53,7 @@ function M.setup(opts)
 	vim.g.terminal_color_2 = c.green
 	vim.g.terminal_color_3 = c.yellow
 	vim.g.terminal_color_4 = c.blue
-	vim.g.terminal_color_5 = c.magenta
+	vim.g.terminal_color_5 = c.yellow
 	vim.g.terminal_color_6 = c.cyan
 	vim.g.terminal_color_7 = c.white
 	vim.g.terminal_color_8 = transparent and "NONE" or c.bright_black
