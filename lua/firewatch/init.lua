@@ -33,12 +33,20 @@ M.colors = {
 
 function M.setup(opts)
 	opts = opts or {}
-	local transparent = opts.transparent or false
+	--local transparent = opts.transparent or false
+
+	local term_colors = opts.term_colors ~= false
 
 	vim.cmd("hi clear")
 	if vim.fn.exists("syntax_on") then
 		vim.cmd("syntax reset")
 	end
+
+	vim.o.background = "dark"
+	vim.g.colors_name = "firewatch"
+
+	local c = M.colors -- c is defined here
+	local bg = c.bg
 
 	vim.o.background = "dark"
 	vim.g.colors_name = "firewatch"

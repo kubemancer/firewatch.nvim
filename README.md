@@ -10,6 +10,7 @@ Warm, muted colors perfect for long coding sessions.
 - LSP diagnostic colors
 - Clean, minimal UI highlighting
 - Dark background with warm accent colors
+  = ejzad
 
 ## Installation
 
